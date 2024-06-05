@@ -41,7 +41,7 @@ jobs:
         with:
           go-version: ${{ inputs.go_version }}
       - name: Install GoReleaser
-        uses: goreleaser/goreleaser-action@v5
+        uses: goreleaser/goreleaser-action@v6
         with:
           version: "~1.17.1"
           install-only: true
@@ -93,7 +93,7 @@ jobs:
           security set-key-partition-list -S "apple-tool:,apple:,codesign:" -s -k "$keychain_password" "$keychain"
           rm "$RUNNER_TEMP/cert.p12"
       - name: Install GoReleaser
-        uses: goreleaser/goreleaser-action@v5
+        uses: goreleaser/goreleaser-action@v6
         with:
           version: "~1.17.1"
           install-only: true
@@ -132,7 +132,7 @@ jobs:
         with:
           go-version: ${{ inputs.go_version }}
       - name: Install GoReleaser
-        uses: goreleaser/goreleaser-action@v5
+        uses: goreleaser/goreleaser-action@v6
         with:
           version: "~1.17.1"
           install-only: true
